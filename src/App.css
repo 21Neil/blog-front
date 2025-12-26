@@ -1,0 +1,15 @@
+@font-face {
+  font-family: caveat;
+  font-weight: 400;
+  src: url(./assets/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: LXGW;
+  font-weight: 400;
+  src: url(./assets/LXGWWenKaiTC-Regular.ttf);
+}
+
+:root {
+  font-size: 14px;
+}
