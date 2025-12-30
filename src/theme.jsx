@@ -22,6 +22,13 @@ const theme = createTheme({
   primaryColor: 'main-color',
   lineHeights: 1,
   defaultRadius: '6px',
+  fontSizes: {
+    sx: '0.6rem',
+    sm: '0.8rem',
+    md: '1rem',
+    lg: '1.2rem',
+    xl: '1.4rem',
+  },
   headings: {
     fontWeight: 400,
   },

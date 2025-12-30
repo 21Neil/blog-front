@@ -18,3 +18,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+div:has(main) {
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
