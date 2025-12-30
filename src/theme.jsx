@@ -1,4 +1,4 @@
-import { createTheme } from "@mantine/core";
+import { createTheme } from '@mantine/core';
 
 const theme = createTheme({
   scale: 1.14285714,
@@ -23,8 +23,8 @@ const theme = createTheme({
   lineHeights: 1,
   defaultRadius: '6px',
   headings: {
-    fontWeight: 400
-  }
-})
+    fontWeight: 400,
+  },
+});
 
 export default theme;

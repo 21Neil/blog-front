@@ -6,8 +6,7 @@ export const routes = [
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
-    Children: [
+    children: [
       {
         index: true,
         element: <Home />,
