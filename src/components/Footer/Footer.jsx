@@ -20,15 +20,33 @@ const Footer = () => {
         </Text>
       </Stack>
       <Flex gap='12px'>
-        <Text size='16px'>
-          <FontAwesomeIcon icon='fa-brands fa-instagram' />
-        </Text>
-        <Text size='16px'>
-          <FontAwesomeIcon icon='fa-brands fa-linkedin' />
-        </Text>
-        <Text size='16px'>
-          <FontAwesomeIcon icon='fa-brands fa-github' />
-        </Text>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://www.instagram.com/neil_trigger/'
+        >
+          <Text size='16px'>
+            <FontAwesomeIcon icon='fa-brands fa-instagram' />
+          </Text>
+        </a>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://www.linkedin.com/in/neil-c-100369303'
+        >
+          <Text size='16px'>
+            <FontAwesomeIcon icon='fa-brands fa-linkedin' />
+          </Text>
+        </a>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://github.com/21Neil'
+        >
+          <Text size='16px'>
+            <FontAwesomeIcon icon='fa-brands fa-github' />
+          </Text>
+        </a>
       </Flex>
     </Flex>
   );
