@@ -1,0 +1,25 @@
+.hero {
+  z-index: -1;
+  position: relative;
+}
+
+.mainText {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  color: white;
+  text-align: center;
+  transform: translateX(-50%);
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.subText {
+  position: absolute;
+  top: 70%;
+  right: 35%;
+  color: #91DCFF;
+  font-size: 16px;
+}

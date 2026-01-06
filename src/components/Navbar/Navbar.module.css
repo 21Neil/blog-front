@@ -1,0 +1,10 @@
+.navbar {
+  padding: 8px 28px;
+  background: #797979;
+}
+
+.navbarTransparent {
+  position: fixed;
+  width: 100%;
+  background: none;
+}
