@@ -8,8 +8,8 @@ function App() {
   const path = useLocation().pathname;
 
   return (
-    <Stack gap='0'>
-      {path === '/Home' ? <Navbar home={true} /> : <Navbar />}
+    <Stack gap={0}>
+      {path === '/' ? <Navbar home={true} /> : <Navbar />}
       <Outlet />
       <Footer />
     </Stack>

@@ -8,18 +8,18 @@ const Footer = () => {
       bg='main-color'
       justify='space-between'
       align='center'
-      px='28px'
-      py='12px'
+      px={28}
+      py={12}
     >
       <Text size='12px'>©2025 Neil</Text>
-      <Stack gap='0'>
+      <Stack gap={0}>
         <Text>Contact me</Text>
         <Text size='12px'>
           <FontAwesomeIcon icon='fa-solid fa-envelope' />
           neeilchu@gmail.com
         </Text>
       </Stack>
-      <Flex gap='12px'>
+      <Flex gap={12}>
         <a
           target='_blank'
           rel='noopener noreferrer'

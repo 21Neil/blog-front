@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import style from './Navbar.module.css';
 
 const Navbar = ({ home }) => {
-  console.log(home);
   return (
     <Flex
       c='white'
@@ -11,7 +10,7 @@ const Navbar = ({ home }) => {
       align='center'
       className={style.navbar + ' ' + (home && style.navbarTransparent)}
     >
-      <Title ff='caveat' size='28px'>
+      <Title ff='caveat' size={28}>
         <Link>Neil.</Link>
       </Title>
       <Link>About me</Link>
