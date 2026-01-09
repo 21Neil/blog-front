@@ -2,6 +2,7 @@ import { LoadingOverlay } from '@mantine/core';
 import App from './App';
 import Error from './pages/Error/Error';
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
@@ -18,6 +19,10 @@ export const routes = [
           return await fetch(baseUrl + '/posts');
         },
         element: <Home />,
+      },
+      {
+        path: 'about',
+        element: <About />
       },
       {
         path: '*',

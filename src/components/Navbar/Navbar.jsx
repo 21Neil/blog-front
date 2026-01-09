@@ -10,10 +10,10 @@ const Navbar = ({ home }) => {
       align='center'
       className={style.navbar + ' ' + (home && style.navbarTransparent)}
     >
-      <Title ff='caveat' size={28}>
-        <Link>Neil.</Link>
+      <Title ff='caveat'>
+        <Link to='/'>Neil.</Link>
       </Title>
-      <Link>About me</Link>
+      <Link to='/about'>About me</Link>
     </Flex>
   );
 };

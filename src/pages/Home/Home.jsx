@@ -7,7 +7,7 @@ const Home = () => {
   const posts = useLoaderData();
 
   return (
-    <Stack component='main' gap={0} style={{ flexGrow: 1 }}>
+    <Stack component='main' gap={0}>
       <Box className={style.hero}>
         <Image src={Hero} />
         <Box className={style.mainText}>
@@ -18,7 +18,7 @@ const Home = () => {
       </Box>
 
       <Box px={28} mb={16}>
-        <Title order={2} size={20} my={16}>
+        <Title order={2} my={16}>
           全部文章
         </Title>
 
