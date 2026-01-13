@@ -3,6 +3,7 @@ import App from './App';
 import Error from './pages/Error/Error';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Post from './pages/Post/Post';
 
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
@@ -22,7 +23,14 @@ export const routes = [
       },
       {
         path: 'about',
-        element: <About />
+        element: <About />,
+      },
+      {
+        path: 'posts/:id',
+        loader: async data => {
+          return await fetch(baseUrl + '/posts/' + data.params.id)
+        },
+        element: <Post />,
       },
       {
         path: '*',
