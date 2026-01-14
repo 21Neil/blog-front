@@ -23,3 +23,7 @@
   color: #91DCFF;
   font-size: 16px;
 }
+
+.card {
+  cursor: pointer;
+}
