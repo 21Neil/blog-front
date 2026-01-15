@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const cardOnClick = id => {
-    navigate('/posts/' + id)
+    navigate('/posts/' + id);
   };
 
   return (
@@ -30,12 +30,20 @@ const Home = () => {
         <Grid>
           {posts.map(post => (
             <Grid.Col key={post.id} span={{ base: 6, xs: 4, sm: 3 }}>
-              <Card className={style.card} withBorder h={200} p={0} onClick={() => cardOnClick(post.id)}>
+              <Card
+                className={style.card}
+                withBorder
+                h={200}
+                p={0}
+                onClick={() => cardOnClick(post.id)}
+              >
                 <Image src={post.imageUrl} h={110} fit='cover' />
 
                 <Box p={8} w='100%'>
                   <Title order={3} size={16} py={4}>
-                    {post.title}
+                    {post.title.length > 7
+                      ? post.title.slice(0, 7) + '...'
+                      : post.title}
                   </Title>
                   <Text>
                     {post.TEXTContent.length > 20
