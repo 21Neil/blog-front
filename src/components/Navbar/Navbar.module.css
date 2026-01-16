@@ -1,10 +1,15 @@
 .navbar {
+  position: sticky;
   padding: 8px 28px;
-  background: #797979;
+  background-color: #797979;
+  z-index: 99;
+}
+
+.homeNavbar {
+  transition: background-color 0.3s ease;
+  position: fixed;
 }
 
 .navbarTransparent {
-  position: fixed;
-  width: 100%;
-  background: none;
+  background-color: transparent;
 }
