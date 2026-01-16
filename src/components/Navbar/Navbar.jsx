@@ -1,31 +1,40 @@
-import { Flex, Title } from '@mantine/core';
+import { Box, Flex, Title } from '@mantine/core';
 import { Link } from 'react-router';
 import style from './Navbar.module.css';
-import { useWindowScroll } from '@mantine/hooks';
+import { useViewportSize, useWindowScroll } from '@mantine/hooks';
 
 const Navbar = ({ home }) => {
   const [scroll] = useWindowScroll();
+  const { width } = useViewportSize();
+  const height = width > 576 ? 450 : 200
 
   return (
-    <Flex
-      c='white'
-      justify='space-between'
-      align='center'
+    <Box
+      w='100%'
       className={
         style.navbar +
         ' ' +
         (home && style.homeNavbar) +
         ' ' +
-        (home && scroll.y < 339 && style.navbarTransparent)
+        (home && scroll.y < height && style.navbarTransparent)
       }
       top={0}
-      w='100%'
     >
-      <Title ff='caveat'>
-        <Link to='/'>Neil.</Link>
-      </Title>
-      <Link to='/about'>About me</Link>
-    </Flex>
+      <Flex
+        c='white'
+        justify='space-between'
+        align='center'
+        maw={768}
+        mx='auto'
+        px={28}
+        py={8}
+      >
+        <Title ff='caveat'>
+          <Link to='/'>Neil.</Link>
+        </Title>
+        <Link to='/about'>About me</Link>
+      </Flex>
+    </Box>
   );
 };
 

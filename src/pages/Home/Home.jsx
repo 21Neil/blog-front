@@ -12,51 +12,54 @@ const Home = () => {
   };
 
   return (
-    <Stack component='main' gap={0}>
+    <Box>
       <Box className={style.hero}>
-        <Image src={Hero} />
-        <Box className={style.mainText}>
-          <Text>為旅程</Text>
-          <Text>留下清晰的</Text>
+        <Box className={style.heroContainer}>
+          <Image src={Hero} />
+          <Box className={style.mainText}>
+            <Text>為旅程</Text>
+            <Text>留下清晰的</Text>
+          </Box>
+          <Text className={style.subText}>回憶</Text>
         </Box>
-        <Text className={style.subText}>回憶</Text>
       </Box>
 
-      <Box px={28} mb={16}>
-        <Title order={2} my={16}>
-          全部文章
-        </Title>
+      <Stack component='main' gap={0}>
+        <Box px={28} mb={16}>
+          <Title order={2} my={16}>
+            全部文章
+          </Title>
 
-        <Grid>
-          {posts.map(post => (
-            <Grid.Col key={post.id} span={{ base: 6, xs: 4, sm: 3 }}>
-              <Card
-                className={style.card}
-                withBorder
-                h={200}
-                p={0}
-                onClick={() => cardOnClick(post.id)}
-              >
-                <Image src={post.imageUrl} h={110} fit='cover' />
-
-                <Box p={8} w='100%'>
-                  <Title order={3} size={16} py={4}>
-                    {post.title.length > 7
-                      ? post.title.slice(0, 7) + '...'
-                      : post.title}
-                  </Title>
-                  <Text>
-                    {post.TEXTContent.length > 20
-                      ? post.TEXTContent.slice(0, 20) + '...'
-                      : post.TEXTContent}
-                  </Text>
-                </Box>
-              </Card>
-            </Grid.Col>
-          ))}
-        </Grid>
-      </Box>
-    </Stack>
+          <Grid>
+            {posts.map(post => (
+              <Grid.Col key={post.id} span={{ base: 6, xs: 4, sm: 3 }}>
+                <Card
+                  className={style.card}
+                  withBorder
+                  h={200}
+                  p={0}
+                  onClick={() => cardOnClick(post.id)}
+                >
+                  <Image src={post.imageUrl} h={110} fit='cover' />
+                  <Box p={8} w='100%'>
+                    <Title order={3} size={16} py={4}>
+                      {post.title.length > 7
+                        ? post.title.slice(0, 7) + '...'
+                        : post.title}
+                    </Title>
+                    <Text>
+                      {post.TEXTContent.length > 20
+                        ? post.TEXTContent.slice(0, 20) + '...'
+                        : post.TEXTContent}
+                    </Text>
+                  </Box>
+                </Card>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </Box>
+      </Stack>
+    </Box>
   );
 };
 
