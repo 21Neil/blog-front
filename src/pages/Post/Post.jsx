@@ -71,15 +71,15 @@ const Post = () => {
 
   return (
     <Box component='main' px={24}>
-      <Title order={2} my={16}>
+      <Title order={2} my={16} size={36} >
         {post.title}
       </Title>
 
       <Box>
-        <Image src={post.imageUrl} bdrs={5} mb={16} />
+        <Image src={post.imageUrl} h={{ base: 250, xs: 400}} bdrs={5} mb={16} />
 
         <Typography>
-          <div dangerouslySetInnerHTML={{ __html: post.HTMLContent }} />
+          <Box dangerouslySetInnerHTML={{ __html: post.HTMLContent }} />
         </Typography>
       </Box>
 
