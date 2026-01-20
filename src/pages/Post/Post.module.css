@@ -29,3 +29,12 @@
     background: var(--mantine-color-gray-4);
   }
 }
+
+.postContentContainer {
+  img {
+    display: block;
+    max-height: 70vh;
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+}

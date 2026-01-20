@@ -17,6 +17,7 @@ import { useDisclosure } from '@mantine/hooks';
 import CommentListItem from './Widgets/CommentListItem';
 import NoticeModal from './Widgets/NoticeModal';
 import CommentForm from './Widgets/CommentForm';
+import style from './Post.module.css'
 
 const commentSchema = z.object({
   name: z.string().min(1, { message: '請輸入暱稱' }).trim(),
@@ -78,7 +79,7 @@ const Post = () => {
       <Box>
         <Image src={post.imageUrl} h={{ base: 250, xs: 400}} bdrs={5} mb={16} />
 
-        <Typography>
+        <Typography className={style.postContentContainer}>
           <Box dangerouslySetInnerHTML={{ __html: post.HTMLContent }} />
         </Typography>
       </Box>
