@@ -1,6 +1,7 @@
-import { Center, Modal, Title } from "@mantine/core";
+import { Modal, Stack, Text, Title } from '@mantine/core';
 
-const NoticeModal = ({ opened, close, modalMsg }) => {
+const NoticeModal = ({ opened, close, data }) => {
+  console.log(data)
   return (
     <Modal
       opened={opened}
@@ -10,11 +11,12 @@ const NoticeModal = ({ opened, close, modalMsg }) => {
       size='xs'
       p={0}
     >
-      <Center h={150}>
+      <Stack h={150} justify='center' align='center'>
         <Title order={2} size={24}>
-          {modalMsg}
+          {data.title}
         </Title>
-      </Center>
+        {data.msg && <Text>{data.msg}</Text>}
+      </Stack>
     </Modal>
   );
 };

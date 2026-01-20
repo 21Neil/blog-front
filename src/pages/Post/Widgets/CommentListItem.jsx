@@ -10,7 +10,7 @@ const CommentListItem = ({ comment }) => {
           {comment.name}
         </Title>
         <Text fz={12}>
-          {date.getFullYear() + '/' + date.getMonth() + '/' + date.getDate()}
+          {date.getFullYear() + '/' + (+date.getMonth() + 1) + '/' + date.getDate()}
         </Text>
       </Flex>
 

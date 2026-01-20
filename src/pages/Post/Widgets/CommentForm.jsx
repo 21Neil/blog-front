@@ -18,7 +18,7 @@ const CommentForm = ({ form, handleSubmit }) => {
           {...form.getInputProps('name')}
           placeholder='Name'
           variant='unstyled'
-          error={!!form.errors.name}
+          classNames={{ input: style.commentNameInput,  error: style.commentNameInputError }}
         />
         <Textarea
           key={form.key('content')}
