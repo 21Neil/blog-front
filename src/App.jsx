@@ -1,5 +1,5 @@
 import './App.css';
-import { Outlet, useLocation } from 'react-router';
+import { Outlet, ScrollRestoration, useLocation } from 'react-router';
 import Navbar from './components/Navbar/Navbar';
 import { Stack } from '@mantine/core';
 import Footer from './components/Footer/Footer';
@@ -12,6 +12,7 @@ function App() {
       {path === '/' ? <Navbar home={true} /> : <Navbar />}
       <Outlet />
       <Footer />
+      <ScrollRestoration />
     </Stack>
   );
 }
