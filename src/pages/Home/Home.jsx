@@ -1,15 +1,10 @@
 import { Box, Card, Grid, Image, Stack, Text, Title } from '@mantine/core';
 import Hero from '/src/assets/hero.jpg';
 import style from './Home.module.css';
-import { useLoaderData, useNavigate } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const Home = () => {
   const posts = useLoaderData();
-  const navigate = useNavigate();
-
-  const cardOnClick = id => {
-    navigate('/posts/' + id);
-  };
 
   return (
     <Box>
@@ -38,7 +33,8 @@ const Home = () => {
                   withBorder
                   h={200}
                   p={0}
-                  onClick={() => cardOnClick(post.id)}
+                  component={Link}
+                  to={'/posts/' + post.id}
                 >
                   <Image src={post.imageUrl} h={110} fit='cover' />
                   <Box p={8} w='100%'>
