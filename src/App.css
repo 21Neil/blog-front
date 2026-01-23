@@ -24,7 +24,7 @@ p {
 }
 
 div:has(main) {
-  min-height: 100vh;
+  min-height: calc(100vh - 58.19px);
   height: 100%;
 }
 
