@@ -17,7 +17,7 @@ export const routes = [
       {
         index: true,
         loader: async () => {
-          return await fetch(baseUrl + '/posts');
+          return await fetch(baseUrl + '/posts/');
         },
         element: <Home />,
       },
