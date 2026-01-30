@@ -1,5 +1,7 @@
 # 📙Blog
 
+[🔗 點此訪問網站](https://blog.twoneil.party/)
+
 這是一個基於 React 與 Mantine UI 構建的響應式部落格，整合了 Cloudflare R2 圖片儲存與 Railway 後端 API，提供流暢的閱讀與互動體驗。
 
 ## 🛠 技術棧
