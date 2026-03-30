@@ -11,30 +11,34 @@ export const routes = [
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
     HydrateFallback: () => <LoadingOverlay visible={true} />,
     children: [
       {
-        index: true,
-        loader: async () => {
-          return await fetch(baseUrl + '/posts/');
-        },
-        element: <Home />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-      {
-        path: 'posts/:id',
-        loader: async data => {
-          return await fetch(baseUrl + '/posts/' + data.params.id)
-        },
-        element: <Post />,
-      },
-      {
-        path: '*',
-        element: <Error />,
+        errorElement: <Error />,
+        children: [
+          {
+            index: true,
+            loader: async () => {
+              return await fetch(baseUrl + '/posts/');
+            },
+            element: <Home />,
+          },
+          {
+            path: 'about',
+            element: <About />,
+          },
+          {
+            path: 'posts/:id',
+            loader: async data => {
+              return await fetch(baseUrl + '/posts/' + data.params.id);
+            },
+            element: <Post />,
+          },
+          {
+            path: '*',
+            element: <Error />,
+          },
+        ],
       },
     ],
   },
