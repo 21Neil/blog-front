@@ -1,12 +1,14 @@
 import './App.css';
-import { Outlet, ScrollRestoration, useLocation, useRouteError } from 'react-router';
+import { Outlet, ScrollRestoration, useLocation, useNavigation, useRouteError } from 'react-router';
 import Navbar from './components/Navbar/Navbar';
-import { Stack } from '@mantine/core';
+import { LoadingOverlay, Stack } from '@mantine/core';
 import Footer from './components/Footer/Footer';
 
 function App() {
   const path = useLocation().pathname;
   const error = useRouteError();
+  const navigation = useNavigation();
+  const isNavigating = navigation.state === 'loading'
 
   return (
     <Stack gap={0}>
@@ -14,6 +16,7 @@ function App() {
       <Outlet />
       <Footer />
       <ScrollRestoration />
+      <LoadingOverlay visible={isNavigating} />
     </Stack>
   );
 }
