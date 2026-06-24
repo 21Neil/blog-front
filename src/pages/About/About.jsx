@@ -1,7 +1,7 @@
 import { Box, Image, Stack, Text, Title } from '@mantine/core';
-import aboutMe1 from '/src/assets/about-me-1.jpg';
-import aboutMe2 from '/src/assets/about-me-2.jpg';
-import aboutMe3 from '/src/assets/about-me-3.jpg';
+import aboutMe1 from '/src/assets/about-me-1.webp';
+import aboutMe2 from '/src/assets/about-me-2.webp';
+import aboutMe3 from '/src/assets/about-me-3.webp';
 
 const About = () => {
   return (
